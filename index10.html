@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohit-Nikhade</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #ffffff;
+      color: #333;
+    }
+    
+    /* Navigation Bar */
+    header {
+      background-color: #fff;
+      padding: 1rem 2rem;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+    
+    .nav-links li {
+      margin: 0 1rem;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    
+    .nav-links a:hover {
+      color: #6a1b9a;
+    }
+    
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap; /* Enable wrapping for smaller screens */
+      align-items: center;
+      justify-content: center; /* Center align items for smaller screens */
+      padding: 2rem;
+      position: relative;
+    }
+    
+    .hero-content {
+      max-width: 50%;
+    }
+    
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      animation: typing 1.5s steps(30, end) 1;
+      margin-right: 4rem;
+    }
+    @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+
+    .hero-content .intro-text {
+        margin-right: 2rem;
+        font-size: 16px; 
+        font-weight: bold; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif; 
+        padding-left: 15%; 
+        margin-left: -15%;
+    }
+    
+    .hero-content .highlight {
+      color: #6a1b9a;
+    }
+    
+    .hero-content p {
+      margin-bottom: 1rem;
+    }
+    
+    .cta-button {
+      background-color: #6a1b9a;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .cta-button:hover {
+      background-color: #50106e;
+    }
+    
+    .circle-background {
+      position: absolute;
+      top: 20%;
+      left: 12%;
+      width: 250px;
+      height: 250px;
+      background-color: #e9e7ff;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .sparkle-shape {
+      position: absolute;
+      top: 10%; /* Adjust the top position as needed */
+      right: 30%;
+      font-size: 50px; /* Adjust the size as needed */
+      color: rgb(255, 228, 75);
+      animation: sparkle 2s infinite;
+    }
+    
+    .hero-image {
+      position: relative;
+      max-width: 100%; /* Make the image responsive */
+      text-align: center; /* Center the image */
+    }
+    
+    .hero-image img {
+      width: 300px; /* Adjusted image size for responsiveness */
+      max-width: 100%;
+      border-radius: 50%;
+      margin-left: 60%;
+    }
+    
+    .background-rectangle {
+      position: absolute;
+      margin-top: 15%;
+      margin-left: 45%;
+      width: 200px;
+      height: 300px;
+      background-color: #f2e3ff;
+      border-radius: 25px;
+      z-index: -1;
+    }
+    
+    .burst {
+      background: #d4fbe5;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      bottom: 10px;
+      margin-left: 30%;
+      transform: translateX(-50%);
+      border-radius: 20%;
+    }
+    
+    .experience { 
+      position: absolute; 
+      bottom: 150px; 
+      right: -225px; 
+      background-color: rgba(255, 255, 255, 0.5); 
+      border-radius: 10px; 
+      padding: 0.5rem; 
+      text-align: center; 
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    }
+
+    .experience span {
+      font-size: 1.2rem;
+      color: #6a1b9a;
+      font-weight: bold;
+    }
+    
+    /* Clients Section */
+    .clients {
+      background-color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .client-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    .client-logos img {
+      max-height: 80px;
+      max-width: 80px;
+      margin: 1rem;
+    }
+    
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+
+      .hero-content h1 {
+        font-size: 2rem;
+        align-items: center;
+        justify-content: center;
+        margin-left: 7.5%;
+      }
+
+      .hero-image img {
+        width: 300px; /* Adjusted image size for responsiveness */
+        max-width: 100%;
+        border-radius: 50%;
+        margin-left: 50px;
+      }
+
+      .hero-content .intro-text {
+        align-items: center;
+        margin-right: auto;
+      }
+
+      .hero {
+        flex-direction: column; /* Stack hero content and image */
+        text-align: center;
+      }
+    
+      .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+      }
+    
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .background-rectangle {
+        background: #f3edf8;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        bottom: 50px;
+        margin-left: 30%;
+        transform: translateX(-50%);
+        border-radius: 20%;
+      }
+
+      .hero-content .rectangle-one {
+        background: #f0f0ff;
+          width: 250px;
+          height: 250px;
+          position: absolute;
+          margin-top: 40px;
+          margin-left: 135px;
+          transform: translateX(-50%);
+          border-radius: 50%;
+          z-index: -1;
+      }
+
+      /* .hero-content .rectangle-two {
+        background: #fff6e9;
+          width: 150px;
+          height: 150px;
+          position: absolute;
+          margin-top: 120px;
+          margin-left: 105px;
+          transform: translateX(-50%);
+          border-radius: 50%;
+          z-index: -1;
+      } */
+
+      .burst {
+        width: 50px;
+        height: 50px;
+      }
+
+      .burst-one {
+          background: #fddeff;
+          width: 125px;
+          height: 150px;
+          position: absolute;
+          margin-top: 125px;
+          margin-left: 80%;
+          transform: translateX(-50%);
+          border-radius: 15%;
+          z-index: -1;
+      }
+
+      .burst-two {
+          background: #e6e8ff;
+          width: 150px;
+          height: 150px;
+          position: absolute;
+          margin-top: 100px;
+          margin-left: 25%;
+          transform: translateX(-50%);
+          border-radius: 50%;
+          z-index: -1;
+      }
+
+
+
+      .sparkle-shape {
+        position: absolute;
+        top: 25%; /* Adjust the top position as needed */
+        right: 20%;
+        font-size: 40px; /* Adjust the size as needed */
+        color: rgb(255, 228, 75);
+        animation: sparkle 2s infinite;
+      }
+
+      .cta-button {
+        align-items: center;
+      }
+    
+      .circle-background {
+        display: none; /* Hide circle on small screens */
+      }
+    
+      .background-rectangle {
+        display: none; /* Hide rectangle on small screens */
+      }
+    
+      .hero-image img {
+        width: 250px; /* Smaller image for smaller screens */
+      }
+    
+      .experience {
+        bottom: auto;
+        top: 250px;
+        right: -40px;
+        padding: 0.25rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 2rem;
+        align-items: center;
+        justify-content: center;
+        margin-left: 7.5%;
+      }
+
+      .hero-content .intro-text {
+        align-items: center;
+        margin-right: 5%;
+      }
+    
+      .cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+    
+      .client-logos img {
+        max-height: 60px;
+        max-width: 60px;
+      }
+
+      .experience {
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    </style>
+    
+</head>
+<body>
+    <span class="sparkle-shape">✦</span>
+    
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <!-- <img src="C:\Users\nisha\Downloads\Mediamodifier-Design-cropped.svg" alt="Logo"> -->
+        <img src="C:\Users\nisha\Downloads\Mediamodifier-Design-cropped.svg" alt="Logo" style="width: 80px; height: 80px;">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#archivista">Archivista</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="circle-background"></div> <!-- Light blue circle -->
+    <div class="hero-content">
+        <span class="rectangle-one"></span> 
+        <h1>Hi<span style="color: lightgrey;">,</span> <br> I am <span class="highlight">Mohit Nikhade</span></h1>
+        <span class="rectangle-two"></span>
+      <p class="intro-text">"An architect turned product designer based in Pune, India. My expertise lies in creating user-friendly responsive designs driven by data and research.</p> 
+      <p class="intro-text">Having transitioned from architecture to product design, I’ve embraced the world of technology with a focus on AI-driven and AR/VR mobile and web applications. My journey has been fueled by a passion for innovation and a commitment to enhancing user experiences through cutting-edge design solutions."</p> 
+      <button class="cta-button">What sets me apart?</button>
+    </div>
+    <div class="hero-image">
+      <div class="background-rectangle"></div>
+      <div class="burst"></div> <!-- Burst shape -->
+      <div class="burst-one"></div>
+      <div class="burst-two"></div>
+      <div class="burst-three"></div>
+      <div class="experience">
+            <span>FRESHER</span>
+            <p>AI & ML Developer</p>
+      </div>
+        <img src="C:\Users\nisha\Downloads\Convocation-2024_SVG.svg" alt="Mohit-Nikhade">
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section class="clients">
+    <h2>Clients worked for:</h2>
+    <div class="client-logos">
+      <img src="C:\Users\nisha\Downloads\Tech_Monarchs_image_3.svg" alt="Tech Monarchs">
+      <img src="C:\Users\nisha\Downloads\AI_Q_4.svg" alt="AI-QUEUE">
+      <img src="C:\Users\nisha\Downloads\EROM_TEKNAS_3.svg" alt="EROM TEKNAS">
+      <img src="C:\Users\nisha\Downloads\V_ROCKERZ_LOGO_3.svg" alt="V ROCKERZ">
+      <img src="C:\Users\nisha\Downloads\Neuroeye_Logo_3.svg" alt="Neureye.ai">
+      <!-- <img src="logo7.png" alt="PanPalz">
+      <img src="logo8.png" alt="UpView">
+      <img src="logo9.png" alt="Think Round">
+      <img src="logo10.png" alt="Teearch"> -->
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
